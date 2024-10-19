@@ -23,7 +23,7 @@
 
     // Call AnimeTracker API to get User Data
     async function fetchUserAnimes(userId) {
-        const url = `https://animes-tracker.onrender.com/users/${userId}`;
+        const url = `http://localhost:8080/users/${userId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
@@ -51,7 +51,7 @@
 
     // Call AnimeTracker API to get User Recommendations
     async function fetchSuggestedAnimes(userId) {
-        const url = `https://animes-tracker.onrender.com/users/recommendaion/${userId}`;
+        const url = `http://localhost:8080/users/recommendaion/${userId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
@@ -67,7 +67,7 @@
 
     // Call AnimeTracker to update the User WatchedAnime list
     const updateUserAnimeList = async () => {
-        const url = 'https://animes-tracker.onrender.com/users';
+        const url = 'http://localhost:8080/users';
 
         const bodyData = {
             id: userInnerId,
@@ -355,10 +355,11 @@
 
     // Add Suggest AnimeToList
     function addSuggestAnimeToList(button) {
-
-                addAnimeToUserList(button).then(()=>{
-                     
-                });
+            const container = button.closest('.flex-col');
+            container.classList.add('hidden');
+            addAnimeToUserList(button).then(()=>{
+                 
+            });
     }
 
     // Select the AnimeStatusMenu and Toggle the Visibility
