@@ -39,6 +39,11 @@
 
             loadUserDataToInnerHTML();
 
+            const toggleIcon = document.querySelector('.filter-menu-toggler');
+            toggleIcon.classList.remove('hidden');
+            const searchAnime = document.querySelector('.search-anime');
+            searchAnime.classList.remove('hidden');
+
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -66,7 +71,7 @@
 
         const bodyData = {
             id: userInnerId,
-            username: "Otakalol",
+            username: "Fernando",
             password: "",
             email: "",
             watchedAnimes: allAnimes
