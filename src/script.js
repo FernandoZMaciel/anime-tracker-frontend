@@ -51,7 +51,7 @@
 
     // Call AnimeTracker API to get User Recommendations
     async function fetchSuggestedAnimes(userId) {
-        const url = `https://animes-tracker.onrender.com/recommendaion/${userId}`;
+        const url = `https://animes-tracker.onrender.com/users/recommendaion/${userId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
