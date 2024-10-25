@@ -15,6 +15,7 @@
     document.addEventListener('DOMContentLoaded', (event) => {
         fetchUserAnimes(userInnerId);
         fetchSuggestedAnimes(userInnerId);
+        alert("Estamos iniciando o servidor... Por ser uma hospedagem gratuita, o primeiro acesso pode demorar um pouquinho (até 1 minutinho). Obrigado pela paciência! 😄");
     });
     
 
